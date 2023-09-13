@@ -1,9 +1,12 @@
 #database and table creation
-#create schema stock_db;
+create schema stock_db;
+use stock_db;
+
 #Used the create table function from dropdwon create tables and columns.
+Create Table tbl_portfolio(ticker varchar(6) Primary key,num_shares INT,date_purchased date, purchase_price decimal(7,2), current_price decimal(7,2)); 
+Create Table tbl_companies(ticker varchar(6) Primary key,company varchar(45),industry varchar(45)); 
 
 #Inputing data into rows
-use stock_db;
 Insert into tbl_portfolio (ticker,num_shares,date_purchased,purchase_price,current_price) values
 ("ORCL","5","2023-08-16","115.34","123.13");
 Insert into tbl_portfolio (ticker,num_shares,date_purchased,purchase_price,current_price) values
